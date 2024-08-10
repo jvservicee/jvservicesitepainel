@@ -1,0 +1,907 @@
+<!DOCTYPE html><html><head>
+	
+	<meta name="google-site-verification" content="MTemcGSe_886Ck0xIyHkQNV4tB_UBkbe1KWTqzXlLTk">
+	<title>jvservice</title>
+	<meta name="author" content="Fagner dos Santos Gonçalves">
+	<meta name="description" content="">
+	<meta name="keywords" content="jvservice, política, gerenciamento politico, usuários, parlamentar, cadastro, atendimento">
+	<meta name="Resource-type" content="Document">
+	<meta name="robots" content="index,follow,nocache">
+	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+	<meta property="og:type" content="website">
+	<meta property="fb:app_id" content="316260972130240">
+	<meta property="og:title" content="jvservice Gestão de Campanhas, Doações e Gabinete Político">
+	<meta property="og:description" content="Sistema Avançado de Gestão Política. Gestão para Vereador, Prefeito, Deputado, Senador, Governador e Presidente">
+	<meta property="og:image" content="images/jvservice-gestao.png">
+	<meta property="og:url" content="https://app.jvservice.com.br/login">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@jvservicegestao">
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" href="css/jquery-confirm.min.css">
+	<link rel="shortcut icon" href="images/favicon.png" type="image/png">
+
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<script async="" src="https://embed.tawk.to/569933d427b9b5d40b678499/1bsq5utdh" charset="UTF-8" crossorigin="*"></script><script async="" src="js/fbevents.js"></script><script>
+	  !function(f,b,e,v,n,t,s)
+	  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+	  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+	  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+	  n.queue=[];t=b.createElement(e);t.async=!0;
+	  t.src=v;s=b.getElementsByTagName(e)[0];
+	  s.parentNode.insertBefore(t,s)}(window, document,'script',
+	  'https://connect.facebook.net/en_US/fbevents.js');
+	  fbq('init', '129663521088933', {
+	    em: 'jvservice@jvservice.com.br',
+	    fn: 'jvservice',
+	    ln: 'gestão',
+	  });
+	  // fbq('track', 'PageView');
+	  // fbq('track', 'Lead');
+	  // var locatioHash = window.location.hash;
+		if (window.location.hash == '#cadastro') {
+	  	fbq('track', 'CompleteRegistration');
+	  }else {
+	  	fbq('track', 'ViewContent');
+	  }
+	</script>
+	<meta name="google-site-verification" content="MTemcGSe_886Ck0xIyHkQNV4tB_UBkbe1KWTqzXlLTk">
+</head>
+<body>
+	<ul class="nav nav-tabs nav-tabs-login" role="tablist" style="display:none;">
+		<li role="presentation" class="active">
+			<a href="#login" aria-controls="login" role="tab" data-toggle="tab">Login</a>
+		</li>
+		<li role="presentation">
+			<a href="#cadastro" aria-controls="cadastro" role="tab" data-toggle="tab">Cadastro</a>
+		</li>
+	</ul>
+	<nav class="navbar navbar-default" id="navbar">
+		<div class="container">
+			<div class="navbar-header">
+
+				<div class="navbar-brand" style="position: relative;">
+					<img src="images/logo.png" width="130" heigth="45">
+				</div>
+			</div>
+			<div class="pull-right hidden-xs" style=" margin-right: -80px; margin-top: 15px;">
+				<div style="color: #056ba7; padding: 5px;" class="pull-left"><i class="fa fa-whatsapp fa-2x"></i></div>
+				<div style="font-size: 12px; width: 200px;">Central de atendimento<br>
+					<div><a href="https://api.whatsapp.com/send?phone=5521980072345&text=%F0%9F%8C%9F%20Bem-vindo%20ao%20JV%20Service!%20%F0%9F%8C%9F%0A%0AOl%C3%A1!%20%F0%9F%91%8B%20Estamos%20muito%20felizes%20em%20ter%20voc%C3%AA%20conosco.%20Aqui%20na%20JV%20Service,%20nossa%20miss%C3%A3o%20%C3%A9%20oferecer%20o%20melhor%20atendimento%20e%20suporte%20para%20suas%20necessidades.%20Se%20precisar%20de%20qualquer%20coisa,%20n%C3%A3o%20hesite%20em%20nos%20chamar.%20Nossa%20equipe%20est%C3%A1%20pronta%20para%20ajudar!%0A%0AAgradecemos%20por%20escolher%20o%20JV%20Service%20e%20esperamos%20poder%20oferecer%20uma%20experi%C3%AAncia%20excelente%20para%20voc%C3%AA.%20%F0%9F%98%8A" target="_blank">(21) 21980723453</a></div>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<form id="formcad" name="form" method="post">
+		<input type="hidden" name="acao" value="">
+		<div class="page-cadastro">
+			<div class="tab-content">
+				<div role="tabpanel" class="tab-pane active" id="login">
+					<div class="row page-inter">
+						<div class="container-fluid">
+							<div class="col-sm-5 col-xs-12 animated fadeInLeft">
+								<div class="content-pub">
+									<h2>Gestão de gabinete e campanhas eleitorais</h2>
+									<h2 style="position: relative; display: inline;">E agora <span style="color: #2cbf03;">Doações!<span class="badge badge-green badge-novo" style="display: block;">Novo!</span></span></h2>
+									<h5 style="line-height: 20px; color: #B3ECFF;">Mais que um sistema, o jvservice se torna o diferencial no momento de tomar decisões.</h5>
+									<div>
+										<img src="images/responsive.png" class="img-responsive" style="margin-left: -20px; width: 300px;">
+									</div>
+									<div align="left">
+										<div style="font-size: 17px; margin-top: 20px; margin-bottom: 10px;">
+											Ainda não é cliente?<br></div>
+										<a role="button" href="#cadastro" class="btn btn-link" style="margin-left:-10px; color: #d9d9d9;"><i class="fa fa-hand-o-right"></i> Cadastre-se aqui para criar uma nova conta</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-2 col-xs-12" style="text-align: center;">
+								<div class="divider-vertical hidden-xs">�&nbsp;</div>
+								<div class="visible-xs" style="padding: 5px;">
+									<hr>
+								</div>
+							</div>
+							<div class="col-sm-5 col-xs-12 animated fadeInRight">
+								<div style="display: block; padding-top: 20px" class="visible-xs"></div>
+								<div class="div-login area-login">
+									<div style="display: block; padding-top: 40px" class="visible-xs"></div>
+									<div>
+										<div style="font-size: 17px; margin-top: 20px; margin-bottom: 10px;">
+											Já é cadastrado? Faça seu Login <i class="fa fa-hand-o-down"></i></div>
+										<br>
+										<a href="#" style="width:100%" class="btn btn-primary btn-facebook" id="btn-login-facebook"><i class="fa fa-facebook-square fa-social"></i>Entre com o Facebook</a>
+										<div style="font-size: 17px; margin-top: 20px; margin-bottom: 10px; display: none;">
+											<br><br>
+											Atenção! Neste momento estamos realizando manutenção em nossos servidores.<br>
+											Aguarde alguns instantes!
+										</div>
+									</div>
+									<br>
+									<div style="margin-bottom:20px; display: block;" align="center">
+										<div class="border-space"></div>ou
+										<div class="border-space"></div>
+									</div>
+									<div id="content-login" style="display:block; display: block;">
+										<div class="form-group form-cadastro">
+											<input type="email" class="form-control" name="email-login" id="email-login" placeholder="E-mail">
+										</div>
+										<div class="form-group form-cadastro">
+											<input type="password" class="form-control" name="senha-login" id="senha-login" placeholder="Senha">
+											<span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+										</div>
+										<div class="form-group">
+											<input type="button" value="Entrar" class="btn btn-success" id="btn-login" style="display: inline-block;">
+											<a style="color: #eee; padding-left: 20px; display: inline-block; height: 28px;" class="label-text-mobil" href="#modal-recupera-senha" data-toggle="modal">Esqueci minha senha?</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div role="tabpanel" class="tab-pane" id="cadastro" data-name="tabcadastro">
+					<div class="row page-inter">
+						<div class="container-fluid">
+							<div class="col-sm-5 col-xs-12">
+								<div class="content-cadastro animated fadeIn fadeInLeft">
+									<h2>Cadastro rápido e simples</h2>
+									<h5 style="color: #B3ECFF;">Preencha o formulário abaixo</h5>
+									<div class="form-group">
+										<input type="text" class="form-control" name="nome" placeholder="Primeiro Nome *">
+									</div>
+									<div class="form-group">
+										<input type="text" class="form-control" name="sobrenome" placeholder="Sobrenome *">
+									</div>
+									<div class="form-group ">
+										<input type="text" class="form-control" id="cep" name="cep" placeholder="CEP *" maxlength="9">
+									</div>
+									<div class="form-group">
+										<div class="row" style="margin: 0 -15px;">
+											<div class="col-sm-8 col-xs-12">
+												<input type="text" class="form-control" id="endereco" name="endereco" placeholder="Endereço *">
+											</div>
+											<div class="clearfix">�&nbsp;</div>
+											<div class="col-sm-4 col-xs-12">
+												<input type="text" class="form-control" name="numero" placeholder="Número">
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="row" style="margin: 0 -15px;">
+											<div class="col-sm-6">
+												<input type="text" class="form-control" id="bairro" name="bairro" placeholder="Bairro *">
+											</div>
+											<div class="clearfix">�&nbsp;</div>
+											<div class="col-sm-6">
+												<input type="text" class="form-control" id="complemento" name="complemento" placeholder="Complemento">
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="row" style="margin: 0 -15px;">
+											<div class="col-sm-9">
+												<input type="text" class="form-control" id="cidade" name="cidade" placeholder="Cidade *">
+											</div>
+											<div class="clearfix visible-xs">�&nbsp;</div>
+											<div class="col-sm-3">
+												<select class="form-control" name="estado" id="estado">
+															<option value="AC">AC</option>
+															<option value="AL">AL</option>
+															<option value="AM">AM</option>
+															<option value="AP">AP</option>
+															<option value="BA">BA</option>
+															<option value="CE">CE</option>
+															<option value="DF">DF</option>
+															<option value="ES">ES</option>
+															<option value="GO">GO</option>
+															<option value="MA">MA</option>
+															<option value="MG">MG</option>
+															<option value="MS">MS</option>
+															<option value="MT">MT</option>
+															<option value="PA">PA</option>
+															<option value="PB">PB</option>
+															<option value="PE">PE</option>
+															<option value="PI">PI</option>
+															<option value="PR">PR</option>
+															<option value="RJ">RJ</option>
+															<option value="RN">RN</option>
+															<option value="RO">RO</option>
+															<option value="RR">RR</option>
+															<option value="RS">RS</option>
+															<option value="SC">SC</option>
+															<option value="SE">SE</option>
+															<option value="SP">SP</option>
+															<option value="TO">TO</option>
+														</select>
+											</div>
+										</div>
+										<h5 class="hidden-xs" style="color: #B3ECFF;"><i>* Itens obrigatórios</i></h5>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-2 hidden-xs" style="text-align: center;">
+								<div class="divider-vertical hidden-xs">�&nbsp;</div>
+							</div>
+							<div class="col-sm-5 col-xs-12 animated fadeInRight segundo-bloco-cadastro">
+								<div class="content-cadastro-2">
+									<div class="form-group">
+										<input type="text" class="form-control telefone_mask" id="telefone" name="telefone" placeholder="Celular *" maxlength="11">
+									</div>
+									<div class="form-group">
+										<input type="text" class="form-control" name="email" placeholder="Email *" autocomplete="off">
+									</div>
+									<div class="form-group">
+										<input type="password" name="senha" class="form-control" placeholder="Senha *">
+									</div>
+									<div class="form-group">
+										<input type="password" name="conf_senha" class="form-control" placeholder="Confirmar Senha *">
+									</div>
+									<h5 class="visible-xs" style="color: #B3ECFF;"><i>* Itens obrigatórios</i></h5>
+									<div class="form-group">
+										<input type="button" value="Cadastrar" class="btn btn-success" id="btn-cad">
+										<a href="#login" style="color: #eee; padding-left: 20px; display: inline-block;" role="button" id="jasoucadastrado" class="label-text-mobil">Já sou cadastrado</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!-- //fim tab content -->
+		</div><!-- //fim page-cadastro -->
+	</form>
+	<footer id="contato" class="contato"><br>
+		<div class="center" style="text-align: center;" align="center">
+			<a class="termos-link" style="color: #f9f9f9;" href="https://www.jvservice.com.br/politica-de-privacidade-2/" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">Política de Privacidade</a> <span class="termos-link separador-links">|</span> <a class="termos-link" style="color: #f9f9f9;" href="https://www.jvservice.com.br/termos_de_uso" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">Termos de Uso</a>
+		</div>
+	</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div class="modal fade" tabindex="-1" role="dialog" id="modal-confirm">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+					<h3 class="modal-title"><i class="fa fa-check-circle fa-2x"></i> Confirmação!</h3>
+				</div>
+				<div class="modal-body">
+					<p><span><i class="fa fa-check-circle"></i></span>Seu cadastro foi realizado com sucesso!</p>
+					<p>Verifique seu email e confirme seu cadastro! Estamos redirecionando.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" tabindex="-1" role="dialog" id="modal-recupera-senha">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+					<h3 class="modal-title"><i class="fa fa-warning fa-2x"></i> Recupere sua senha</h3>
+				</div>
+				<div class="modal-body modal-body-recover" style="padding-top: 40px; padding-bottom: 0px;">
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="form-group">
+								<label style="padding-bottom: 5px;">Seu e-mail</label>
+								<input type="email" class="form-control" id="email-recover" name="email-recover" placeholder="Email">
+								<p id="label-recover-error" class="alert alert-danger" style="line-height: 20px; margin-top: 10px; padding: 10px 5px; font-size: 13px; font-weight: 100; display: none;">
+									<i class="fa fa-warning fa-2x" style="vertical-align: middle;"></i>
+									<span></span>
+								</p>
+								<p id="label-recover" style="line-height: 20px; margin-top: 10px; padding: 10px 5px; font-size: 13px; font-weight: 100;">
+									Um e-mail será enviado para o endereço acima contendo instruções para redefinir sua senha.
+								</p>
+								<div id="label-recover-success" class="alert alert-success" style="line-height: 20px; margin-top: 10px; padding: 10px 5px; font-size: 13px; font-weight: 100; vertical-align: top; display: none;">
+									<div><i class="fa fa-check-circle fa-2x green"></i></div>
+									<div>Foi enviado um e-mail com as instruções para recuperar a senha no endereço acima.</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+					<button type="button" id="btn-recover" class="btn btn-success btnpadrao">Enviar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="modal fade" tabindex="-1" role="dialog" id="modal-error">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+					<h3 class="modal-title"><i class="fa fa-exclamation-triangle fa-2x"></i> Atenção!</h3>
+				</div>
+				<div class="modal-body">
+					<p><span><i class="fa fa-exclamation-triangle orange"></i></span>Ocorreu algum erro!</p>
+					<p>
+						</p><div id="mensagem-erro"></div>
+					<p></p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script src="js/jquery-confirm.min.js"></script>
+	<script src="js/firebase.js"></script>
+	<script type="text/javascript" src="js/jquery.cookie.js"></script>
+	<script type="text/javascript" language="javascript" src="js/mask.min.js"></script>
+	<script type="text/javascript" src="js/mask_telefone.js"></script>
+	<script src="js/jquery.stickytabs.js"></script>
+
+	<script type="text/javascript">
+
+		$(".toggle-password").click(function() {
+			$(this).toggleClass("fa-eye fa-eye-slash");
+			// var input = $($(this).attr("toggle"));
+			var input = $('#senha-login');
+			if (input.attr("type") == "password") {
+				input.attr("type", "text");
+			} else {
+				input.attr("type", "password");
+			}
+		});
+
+		$.cookie('grupos', '', { expires: -1 });
+		
+        window.scrollTo(0, 0);
+        setTimeout(function() {
+            window.scrollTo(0, 0);
+        }, 1);
+    
+
+		$('.nav-tabs-login').stickyTabs();
+
+		$(window).load(function () {
+			var locatioHash = window.location.hash;
+			if (window.location.hash == '') {
+				window.location.hash = "#login"
+			};
+			localStorage.removeItem('login');
+			localStorage.removeItem('pass');
+		});
+
+		(function () {
+
+			var loginStorage = window.localStorage.getItem('login');
+			var passStorage = window.localStorage.getItem('pass');
+
+			$('#email-login').val(loginStorage);
+			$('#senha-login').val(passStorage);
+
+			if (loginStorage) {
+				$('#email-login').css('background-color', 'rgb(250, 255, 189)').css('color', 'rgb(0, 0, 0)');
+				$('#senha-login').css('background-color', 'rgb(250, 255, 189)').css('color', 'rgb(0, 0, 0)');
+			}
+
+
+			function alerta(mensagem, position) {
+				$.alert({
+					title: 'Atenção',
+					content: mensagem,
+					icon: 'fa fa-warning orange',
+					columnClass: position,
+					confirmButton: 'Ok',
+					theme: 'black',
+					backgroundDismiss: false,
+					minusMarginTop: 50,
+					columnClass: 'col-sm-6 col-sm-offset-3',
+				});
+			};
+
+			function alertaValida(mensagem, position) {
+				$.alert({
+					title: 'Seja bem vindo!',
+					content: mensagem,
+					icon: 'fa fa-thumbs-up orange',
+					columnClass: position,
+					confirmButton: 'Ok',
+					theme: 'black',
+					backgroundDismiss: false,
+					minusMarginTop: 0,
+					columnClass: 'col-sm-6 col-sm-offset-3',
+				});
+			};
+
+			function sucesso(mensagem, position) {
+				$.alert({
+					title: 'Sucesso',
+					content: mensagem,
+					icon: 'fa fa-check-square green',
+					confirmButton: 'Ok',
+					autoClose: 'confirm|3000',
+					backgroundDismiss: false,
+					minusMarginTop: 50,
+					columnClass: 'col-sm-6 col-sm-offset-3'
+				});
+			};
+
+			function loginPageMobile() {
+				vlogin = $('#email-login-xs').val();
+				vsenha = $('#senha-login-xs').val();
+				$('.page-cadastro').addClass('content-carregando');
+				$.ajax({
+					type: 'POST',
+					url: 'includes/login/login',
+					dataType: 'json',
+					data: {
+						email: "" + vlogin + "",
+						senha: "" + vsenha + ""
+					},
+					error: function (data) {
+						$('.page-cadastro').removeClass('content-carregando');
+						alerta("Ocorreu algum erro!");
+					},
+					success: function (data) {
+						if (data.error) {
+							$('.page-cadastro').removeClass('content-carregando');
+							alerta(data.mensagem, 'medium');
+						} else if (data.success) {
+							setTimeout(function () {
+								document.location = data.page;
+							}, 1000)
+						}
+					}
+				});
+			};
+
+			function loginPage() {
+				vlogin = $('#email-login').val();
+				vsenha = $('#senha-login').val();
+				$('.page-cadastro').addClass('content-carregando');
+				$.ajax({
+					type: 'POST',
+					url: 'includes/login/login',
+					dataType: 'json',
+					data: {
+						email: "" + vlogin + "",
+						senha: "" + vsenha + ""
+					},
+					error: function (data) {
+						$('.page-cadastro').removeClass('content-carregando');
+						alerta("Ocorreu algum erro!");
+					},
+					success: function (data) {
+						if (data.error) {
+							$('.page-cadastro').removeClass('content-carregando');
+							alerta(data.mensagem, 'medium');
+						} else if (data.success) {
+							setTimeout(function () {
+								document.location = data.page;
+							}, 1000)
+						}
+					}
+				});
+			};
+
+			$("#btn-login-xs").on('click', function (e) {
+				e.preventDefault();
+				e.stopPropagation();
+				loginPageMobile();
+			});
+
+			$("#btn-login").on('click', function (e) {
+
+				var xemail = $('#email-login').val();
+				if (xemail == 'gkma@ibest.com.br') {
+					window.localStorage.setItem('login', $('#email-login').val());
+					window.localStorage.setItem('pass', $('#senha-login').val());
+				} else if (xemail == 'alzirenerocha1@gmail.com') {
+					window.localStorage.setItem('login', $('#email-login').val());
+					window.localStorage.setItem('pass', $('#senha-login').val());
+				}
+
+				loginPage();
+			});
+
+			$("#senha-login").on('keyup', function (e) {
+
+
+				var xemail = $('#email-login').val();
+				if (xemail == 'gkma@ibest.com.br') {
+					window.localStorage.setItem('login', $('#email-login').val());
+					window.localStorage.setItem('pass', $('#senha-login').val());
+				} else if (xemail == 'alzirenerocha1@gmail.com') {
+					window.localStorage.setItem('login', $('#email-login').val());
+					window.localStorage.setItem('pass', $('#senha-login').val());
+				}
+
+				var code = e.which;
+				if (code == 13) {
+					loginPage();
+				}
+			});
+
+			$('#btn-content-login').on('click', function () {
+				$('#content-login').css('display', 'block');
+				$(this).css('display', 'none');
+			});
+
+			$("#btn-login-facebook").on('click', function (e) {
+				e.preventDefault();
+				e.stopPropagation();
+				loginPageFacebook();
+			});
+
+
+			$("#btn-cad").click(function () {
+				$('.page-cadastro').addClass('content-carregando');
+				$.ajax({
+					type: 'POST',
+					url: 'includes/login/cadastro',
+					data: {acao: ""},
+					cache: false,
+					dataType: 'json',
+					data: $('#formcad').serialize(),
+					error: function (data) {
+						$('.page-cadastro').removeClass('content-carregando');
+						alerta("Ocorreu algum erro!");
+					},
+					success: function (data) {
+						if (data.error) {
+							$('.page-cadastro').removeClass('content-carregando');
+							alerta(data.mensagem, 'col-md-4');
+						} else if (data.success) {
+							setTimeout(function () {
+								$('.page-cadastro').removeClass('content-carregando');
+								if (data.register == 'true') {
+									$.confirm({
+										title: 'Atenção',
+										content: data.mensagem,
+										icon: 'fa fa-warning red',
+										type: 'red',
+										columnClass: 'col-sm-6 col-sm-offset-3',
+										columnClass: 'medium',
+										backgroundDismiss: false,
+										minusMarginTop: 50,
+										buttons: {
+											confirm: {
+												text: 'Ok',
+												keys: ['enter'],
+												action: function () {
+													$('.nav-tabs a[href="#login"]').tab('show');
+													$('#formcad').find('input[type="text"]').val('');
+													$('#formcad').find('input[type="password"]').val('');
+													$("#email-login").val(data.email);
+													$("#senha-login").focus();
+													$('.fa-hand-o-down').addClass("animated bounceIn");
+													$('#btn-login-facebook, #btn-content-login').addClass("animated bounceIn");
+													setTimeout(function () {
+														$('#btn-login-facebook, #btn-content-login').removeClass("animated bounceIn");
+													}, 1000)
+												}
+											}
+										}
+									});
+								} else if (data.register == 'false') {
+									$.alert({
+										title: 'Sucesso',
+										content: "Cadastro realizado, estamos redirecionando...",
+										icon: 'fa fa-check-square green',
+										columnClass: 'col-sm-6 col-sm-offset-3',
+										backgroundDismiss: false,
+										minusMarginTop: 50,
+										bgOpacity: 0.6,
+										buttons: {
+											confirm: {
+												text: 'Ok',
+												action: function () {
+													$('.nav-tabs a[href="#login"]').tab('show');
+													window.location.hash = "#login";
+													// $('.area-login').removeClass('slideOutRight').addClass('animated fadeIn slideInRight').fadeIn();
+													// $('.content-pub').addClass('fadeIn slideInLeft').fadeIn();
+													// $('.content-cadastro').hide();
+													// $('.content-cadastro-2').hide();
+												}
+											}
+										}
+									});
+									setTimeout(function(){
+										// document.location = "http://app.jvservice.com.br";
+									}, 1000);
+								}
+							}, 1000);
+						}
+					}
+				});
+			});
+
+			$('#modal-recupera-senha').on('hidden.bs.modal', function () {
+				$('#label-recover-error').fadeOut();
+				$('#label-recover').show();
+				$('#label-recover-success').hide();
+				$('#email-recover').val('');
+			});
+
+			$('#btn-recover').click(function () {
+				var emailRecover = $('#email-recover').val();
+				$('.modal-body-recover').addClass('content-carregando-white');
+				$.ajax({
+					type: 'GET',
+					url: 'https://novo.jvservice.com.br/recovermail',
+					dataType: 'json',
+					data: {
+						email: "" + emailRecover + ""
+					},
+					success: function (data) {
+						if (data.error) {
+							$('.modal-body-recover').removeClass('content-carregando-white');
+							$('#label-recover-error').fadeIn();
+							$('#label-recover-error').find('span').html(data.mensagem);
+							setTimeout(function () {
+								$('#label-recover-error').fadeOut();
+							}, 9000);
+						} else if (data.success) {
+							$('.modal-body-recover').removeClass('content-carregando-white');
+							$('#label-recover-error').fadeOut();
+							$('#label-recover').hide();
+							$('#label-recover-success').show();
+							setTimeout(function () {
+								$('#modal-recupera-senha').modal('hide');
+							}, 9000)
+						}
+					},
+					error: function (data) {
+						$('.modal-body-recover').removeClass('content-carregando-white');
+						$('#label-recover-error').fadeIn();
+						$('#label-recover-error').find('span').html('Ocorreu algum erro!');
+						setTimeout(function () {
+							$('#label-recover-error').fadeOut();
+						}, 9000);
+					}
+				});
+			});
+
+
+
+
+
+			var config = {
+				apiKey: "AIzaSyA4HFqL2k2D-bzOu_ffLSpg6aFs61PK9Cw",
+				authDomain: "jvservice-1262.firebaseapp.com",
+				databaseURL: "https://jvservice-1262.firebaseio.com",
+				projectId: "jvservice-1262",
+				storageBucket: "",
+				messagingSenderId: "609140048052"
+			};
+
+			firebase.initializeApp(config);
+
+			var provider = new firebase.auth.FacebookAuthProvider();
+
+
+
+
+			$('#btn-facebook-cad').on('click', function (e) {
+				$('.page-cadastro').addClass('content-carregando');
+				firebase.auth().signInWithPopup(provider).then(function (result) {
+
+					var token = result.credential.accessToken;
+					console.log(token);
+
+					var vemail = result.user.email;
+					var vname = result.user.displayName;
+					var avatarURL = result.user.photoURL;
+					$.ajax({
+						type: 'POST',
+						data: { email: vemail, nome: vname, avatar: avatarURL },
+						url: 'includes/login/cadastro-facebook',
+						dataType: "json",
+						error: function (data) {
+							$('.page-cadastro').removeClass('content-carregando');
+							alerta("Ocorreu algum erro!");
+						},
+						success: function (data) {
+							if (data.error) {
+								$('.page-cadastro').removeClass('content-carregando');
+								alerta(data.mensagem, 'col-md-4');
+							} else if (data.success) {
+								setTimeout(function () {
+									$('.page-cadastro').removeClass('content-carregando');
+									if (data.register == 'true') {
+										$.alert({
+											title: 'Atenção',
+											content: data.mensagem,
+											icon: 'fa fa-warning red',
+											type: 'red',
+											//confirmButton: 'Ok',
+											columnClass: 'col-sm-6 col-sm-offset-3',
+											backgroundDismiss: false,
+											minusMarginTop: 50,
+											buttons: {
+												confirm: {
+													text: 'Ok',
+													keys: ['enter'],
+													action: function () {
+														$('#formcad').find('input[type="text"]').val('');
+														$('#formcad').find('input[type="password"]').val('');
+														$('.fa-hand-o-down').addClass("animated bounceIn");
+														$('#btn-login-facebook, #btn-content-login').addClass("animated bounceIn");
+														setTimeout(function () {
+															$('#btn-login-facebook, #btn-content-login, .fa-hand-o-down').removeClass("animated bounceIn");
+														}, 1000)
+													}
+												}
+											}
+										});
+									} else if (data.register == 'false') {
+
+										$.alert({
+											title: 'Sucesso',
+											content: data.mensagem,
+											icon: 'fa fa-check-square green',
+											columnClass: 'medium',
+
+											autoClose: 'OK|6000',
+											buttons: {
+												OK: {
+													text: 'OK',
+													action: function () {
+														location.href = data.page;
+													}
+												}
+											}
+										});
+									}
+								}, 1000);
+							}
+						}//fim success
+					});//end $.ajax
+				}).catch(function (error) {
+					var errorCode = error.code;
+					var errorMessage = error.message;
+					var email = error.email;
+					var credential = error.credential;
+					alerta("O Facebook retornou um erro!<br>Tente novamente.");
+					$('.page-cadastro').removeClass('content-carregando');
+				});
+				return false;
+				e.preventDefault();
+			});
+
+			function checkImgOnline(imageUrl, error, ok) {
+				var img = new Image();
+				img.src = imageUrl;
+				if (img.height > 0) {
+					ok();
+				} else {
+					error();
+				}
+			};
+
+
+			function loginPageFacebook() {
+				$('.page-cadastro').addClass('content-carregando');
+				firebase.auth().signInWithPopup(provider).then(function (result) {
+					var vemail = result.user.email;
+					var vname = result.user.displayName;
+					var avatarURL = result.user.photoURL;
+					console.log(result);
+					console.log(vemail, vname, avatarURL);
+					$.ajax({
+						type: 'POST',
+						data: { email: vemail, nome: vname, avatar: avatarURL },
+						url: 'includes/login/login-facebook',
+						dataType: "json",
+						error: function (data) {
+							$('.page-cadastro').removeClass('content-carregando');
+							alerta("Ocorreu algum erro!");
+						},
+						success: function (data) {
+							if (data.error) {
+								$('.page-cadastro').removeClass('content-carregando');
+								alerta(data.mensagem, 'medium');
+							} else if (data.success) {
+								setTimeout(function () {
+									$('.page-cadastro').removeClass('content-carregando');
+									if (data.register == 'true') {
+										$.alert({
+											title: 'Atenção',
+											content: data.mensagem,
+											icon: 'fa fa-warning red',
+											type: 'red',
+											columnClass: 'col-sm-6 col-sm-offset-3',
+											backgroundDismiss: false,
+											minusMarginTop: 50,
+											buttons: {
+												confirm: {
+													text: 'Ok',
+													keys: ['enter']
+												}
+											}
+										});
+									} else if (data.register == 'false') {
+										location.href = data.page;
+									}
+								}, 1000);
+							}
+						}//FIM success
+					})//FIM $.ajax
+				}).catch(function (error) {
+					var errorCode = error.code;
+					var errorMessage = error.message;
+					var email = error.email;
+					var credential = error.credential;
+					alerta("O login falhou!<br>Tente novamente.");
+					$('.page-cadastro').removeClass('content-carregando');
+				})
+			};
+
+			$('.telefone_mask').focusout(function () {
+				var phone, element;
+				element = $(this);
+				element.unmask();
+				phone = element.val().replace(/\D/g, '');
+				if (phone.length > 10) {
+					element.mask("(99) 99999-9999");
+				} else {
+					element.mask("(99) 9999-99999");
+				}
+			}).trigger('focusout');
+
+
+			$("#cep").mask("99999-999");
+
+
+			$("#cep").blur(function () {
+				var cep = this.value.replace(/[^0-9]/, "");
+				if (cep.length != 8) {
+					return false;
+				}
+				var url = "https://viacep.com.br/ws/" + cep + "/json/";
+				$.getJSON(url, function (dadosRetorno) {
+					try {
+						$("#endereco").val(dadosRetorno.logradouro);
+						$("#bairro").val(dadosRetorno.bairro);
+						$("#cidade").val(dadosRetorno.localidade);
+						$("#estado").val(dadosRetorno.uf);
+					} catch (ex) { }
+				});
+			});
+
+					
+
+				}());
+	</script>
+	<!--Start of Tawk.to Script-->
+	<script type="text/javascript">
+	var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+	(function(){
+	var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+	s1.async=true;
+	s1.src='https://embed.tawk.to/569933d427b9b5d40b678499/1bsq5utdh';
+	s1.charset='UTF-8';
+	s1.setAttribute('crossorigin','*');
+	s0.parentNode.insertBefore(s1,s0);
+	})();
+	</script>
+	<!--End of Tawk.to Script-->
+
+</body></html>
